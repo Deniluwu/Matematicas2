@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios matemáticos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header class="bg-dark text-white py-3">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <h1 class="h3 mb-0">Evaluación Matemática</h1>
+                <button class="btn btn-primary d-lg-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebar">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-lg-3 d-none d-lg-block">
+                <div id="sidebar" class="card">
+                    <div class="card-header bg-primary text-white">
+                        <i class="fas fa-list me-2"></i>Menú de Ejercicios
+                    </div>
+                    <div class="list-group list-group-flush">
+                        <a href="#ejercicio1" class="list-group-item list-group-item-action">Ejercicio 1</a>
+                        <a href="#ejercicio2" class="list-group-item list-group-item-action">Ejercicio 2</a>
+                        <a href="#ejercicio3" class="list-group-item list-group-item-action">Ejercicio 3</a>
+                        <a href="#ejercicio4" class="list-group-item list-group-item-action">Ejercicio 4</a>
+                        <a href="#ejercicio5" class="list-group-item list-group-item-action">Ejercicio 5</a>
+                    </div>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="sidebar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menú de Ejercicios</h5>
+                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="list-group">
+                        <a href="#ejercicio1" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">Ejercicio 1</a>
+                        <a href="#ejercicio2" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">Ejercicio 2</a>
+                        <a href="#ejercicio3" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">Ejercicio 3</a>
+                        <a href="#ejercicio4" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">Ejercicio 4</a>
+                        <a href="#ejercicio5" class="list-group-item list-group-item-action" data-bs-dismiss="offcanvas">Ejercicio 5</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9">
+                <!-- Ejercicio 1 -->
+                <section id="ejercicio1" class="mb-5">
+                    <div class="card exercise-card">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h4 mb-0">Ejercicio 1:</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="exercise1-form" class="mb-4">
+                                <div class="mb-3">
+                                    <label for="z-value" class="form-label">Valor de z:</label>
+                                    <div class="input-group variable-input">
+                                        <input type="number" step="any" class="form-control" id="z-value" value="4.5">
+                                        <button class="btn btn-outline-secondary" type="button" id="reset-z">
+                                            <i class="fas fa-undo"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="exercise">
+                                <h3 class="h5">(a) Expresión algebraica</h3>
+                                <div class="math-expression">0.42<sup>4</sup> + 3.12<sup>2</sup> - 162.32 - 80.7</div>
+                                <div id="result-a" class="result-box"></div>
+                            </div>
+                            <div class="exercise">
+                                <h3 class="h5">(b) Expresión con raíz cúbica</h3>
+                                <div class="math-expression">(z<sup>3</sup> - 23) / (∛(z<sup>2</sup> + 17.5))</div>
+                                <div id="result-b" class="result-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Ejercicio 2 -->
+                <section id="ejercicio2" class="mb-5">
+                    <div class="card exercise-card">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h4 mb-0">Ejercicio 2:</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="exercise2-form" class="mb-4">
+                                <div class="mb-3">
+                                    <label for="t-value" class="form-label">Valor de t:</label>
+                                    <div class="input-group variable-input">
+                                        <input type="number" step="any" class="form-control" id="t-value" value="3.2">
+                                        <button class="btn btn-outline-secondary" type="button" id="reset-t">
+                                            <i class="fas fa-undo"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="exercise">
+                                <h3 class="h5">(a) Expresión exponencial</h3>
+                                <div class="math-expression">½ e<sup>2t</sup> - 3.8 t<sup>3</sup></div>
+                                <div id="result-t-a" class="result-box"></div>
+                            </div>
+                            <div class="exercise">
+                                <h3 class="h5">(b) Expresión racional</h3>
+                                <div class="math-expression">(6t<sup>2</sup> + 6t - 2) / (t<sup>2</sup> - 1)</div>
+                                <div id="result-t-b" class="result-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Ejercicio 3 -->
+                <section id="ejercicio3" class="mb-5">
+                    <div class="card exercise-card">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h4 mb-0">Ejercicio 3:</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="exercise3-form" class="mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="x-value" class="form-label">Valor de x:</label>
+                                        <div class="input-group variable-input">
+                                            <input type="number" step="any" class="form-control" id="x-value" value="6.5">
+                                            <button class="btn btn-outline-secondary" type="button" id="reset-x">
+                                                <i class="fas fa-undo"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="y-value" class="form-label">Valor de y:</label>
+                                        <div class="input-group variable-input">
+                                            <input type="number" step="any" class="form-control" id="y-value" value="3.8">
+                                            <button class="btn btn-outline-secondary" type="button" id="reset-y">
+                                                <i class="fas fa-undo"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="exercise">
+                                <h3 class="h5">(a) Expresión combinada</h3>
+                                <div class="math-expression">(x² + y²)<sup>2/3</sup> + (xy)/(y - x)</div>
+                                <div id="result-x-a" class="result-box"></div>
+                            </div>
+                            <div class="exercise">
+                                <h3 class="h5">(b) Expresión con raíz cuadrada</h3>
+                                <div class="math-expression">√(x + y)/(x - y)² + 2x² - xy²</div>
+                                <div id="result-x-b" class="result-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Ejercicio 4 -->
+                <section id="ejercicio4" class="mb-5">
+                    <div class="card exercise-card">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h4 mb-0">Ejercicio 4:</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="exercise4-form" class="mb-4">
+                                <div class="row">
+                                    <div class="col-md-6 mb-3">
+                                        <label for="c-value" class="form-label">Valor de c:</label>
+                                        <div class="input-group variable-input">
+                                            <input type="number" step="any" class="form-control" id="c-value" value="4.6">
+                                            <button class="btn btn-outline-secondary" type="button" id="reset-c">
+                                                <i class="fas fa-undo"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 mb-3">
+                                        <label for="d-value" class="form-label">Valor de d:</label>
+                                        <div class="input-group variable-input">
+                                            <input type="number" step="any" class="form-control" id="d-value" value="1.7">
+                                            <button class="btn btn-outline-secondary" type="button" id="reset-d">
+                                                <i class="fas fa-undo"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="variables-box mb-4 p-3 bg-light rounded">
+                                <p class="mb-1"><strong>Variables calculadas:</strong></p>
+                                <p class="mb-1"><code>a = c·d²</code> → <span id="a-value-display">13.294</span></p>
+                                <p class="mb-0"><code>b = (c + a)/(c - d)</code> → <span id="b-value-display">6.169655</span></p>
+                            </div>
+                            <div class="exercise">
+                                <h3 class="h5">(a) Expresión exponencial compleja</h3>
+                                <div class="math-expression">
+                                    [e<sup>(d - b)</sup> + ³√(c + a) - (c·a)<sup>d</sup>] / b
+                                </div>
+                                <div id="result-abcd-a" class="result-box"></div>
+                            </div>
+                            <div class="exercise">
+                                <h3 class="h5">(b) Expresión algebraica combinada</h3>
+                                <div class="math-expression">
+                                    d/c + (a/b)² - e<sup>d</sup> - a/b
+                                </div>
+                                <div id="result-abcd-b" class="result-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Ejercicio 5 -->
+                <section id="ejercicio5" class="mb-5">
+                    <div class="card exercise-card">
+                        <div class="card-header bg-primary text-white">
+                            <h2 class="h4 mb-0">Ejercicio 5:</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="exercise5-form" class="mb-4">
+                                <div class="mb-3">
+                                    <label for="x-angle" class="form-label">Ángulo x (en radianes):</label>
+                                    <div class="input-group variable-input">
+                                        <input type="number" step="any" class="form-control" id="x-angle" value="0.314159">
+                                        <button class="btn btn-outline-secondary" type="button" id="reset-angle">
+                                            <i class="fas fa-undo"></i>
+                                        </button>
+                                    </div>
+                                    <div class="form-text">π/10 ≈ 0.314159 radianes (18°)</div>
+                                </div>
+                            </form>
+                            <div class="exercise">
+                                <h3 class="h5">(a) Identidad trigonométrica básica</h3>
+                                <div class="math-expression">cos²x - sin²x = 1 - 2sin²x</div>
+                                <div id="trig-a-left" class="result-box left-side"></div>
+                                <div id="trig-a-right" class="result-box right-side"></div>
+                                <div id="trig-a-verification" class="verification-box"></div>
+                            </div>
+                            <div class="exercise">
+                                <h3 class="h5">(b) Identidad con tangente</h3>
+                                <div class="math-expression">tanx/(sinx - 2tanx) = 1/(cosx - 2)</div>
+                                <div id="trig-b-left" class="result-box left-side"></div>
+                                <div id="trig-b-right" class="result-box right-side"></div>
+                                <div id="trig-b-verification" class="verification-box"></div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <footer class="py-4 mt-auto">
+                <div class="col-md-6 text-md-end">
+                    <p class="mb-0">© 2023 Matemáticas Avanzadas</p>
+                    <p class="mb-0">Todos los derechos reservados</p>
+                </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/ejercicios.js"></script>
+</body>
+</html>
